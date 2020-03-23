@@ -16,6 +16,7 @@
     "> 0.25%"
   ],
   "devDependencies": {
+    "acorn": "^7.1.1",
     "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "bulma": "^0.8.1",
