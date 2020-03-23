@@ -1,0 +1,23 @@
+div.profile-about__link-icons a:hover {
+  color: $text-color-hover;
+}
+
+a.profile-about__link-linkedin {
+  margin-right: 20px;
+}
+
+@media (min-width: 1024px) {
+  div.profile-about__vertical-auto {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  div.profile-about__link-icons {
+    text-align: center;
+  }
+}

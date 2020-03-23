@@ -1,0 +1,16 @@
+$heading-font: "Lato", sans-serif;
+$text-font: "Merriweather", serif;
+$heading-size-1: 4rem;
+$heading-size-2: 3rem;
+$heading-size-3: 1.5rem;
+$heading-size-4: 1.2rem;
+$text-color: #212121;
+$text-color-hover: #b90202;
+$background: #fafafa;
+
+@media (max-width: 768px) {
+  $heading-size-1: 2.5rem;
+  $heading-size-2: 2rem;
+  $heading-size-3: 1.2rem;
+  $heading-size-4: 1rem;
+}
