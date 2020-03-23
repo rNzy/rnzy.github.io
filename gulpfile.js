@@ -6,7 +6,8 @@ const settings = {
   styles: true,
   imgs: true,
   html: true,
-  reload: true
+  reload: true,
+  deploy: true
 };
 
 // Paths
@@ -74,6 +75,9 @@ const imagemin = require("gulp-imagemin");
 
 // BrowserSync
 const browserSync = require("browser-sync");
+
+// Deploy
+const deploy = require("gulp-gh-pages");
 
 // Remove pre-existing content from output folders
 const cleanDist = function(done) {
@@ -236,6 +240,12 @@ const watchSource = function(done) {
   done();
 };
 
+// Deploy
+const deployPage = function(done) {
+  if (!settings.deploy) return done();
+  return src("./dist/**/*").pipe(deploy());
+};
+
 // Default task
 // gulp
 exports.default = series(
@@ -246,3 +256,5 @@ exports.default = series(
 // Watch and reload
 // gulp watch
 exports.watch = series(exports.default, startServer, watchSource);
+
+exports.deploy = series(exports.default, deployPage);
